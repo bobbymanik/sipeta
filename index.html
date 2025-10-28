@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/e/e0/TVRI_Riau.svg" type="image/png">
+    <title>Sistem Pelaporan TVRI</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/TVRI_Riau.svg" alt="TVRI Logo" class="logo">
+                <h1>Sistem Pelaporan Transmisi</h1>
+                <h>TVRI Riau</h1>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Kata Sandi:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="login-btn">Masuk</button>
+            </form>
+            
+            <div id="resetPasswordForm" class="reset-form" style="display: none;">
+                <h3>Reset Password</h3>
+                <div class="form-group">
+                    <label for="resetEmail">Email:</label>
+                    <input type="email" id="resetEmail" name="resetEmail" required>
+                </div>
+                <button type="button" onclick="sendResetEmail()" class="login-btn">Kirim Tautan Reset</button>
+                <button type="button" onclick="showLoginForm()" class="secondary-btn">Kembali ke Login</button>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div id="message" class="message"></div>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./script.js"></script>
+</body>
+</html>

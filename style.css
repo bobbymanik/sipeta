@@ -1,0 +1,1002 @@
+/* TVRI Broadcasting Reporting System Styles */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Login Page Styles */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #031770 0%, #031770 100%);
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.login-header h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.login-header h2 {
+    color: #7f8c8d;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.login-form, .reset-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1px;
+    padding: 1px;
+    line-height: 0.5cm;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.login-btn, .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #031770 0%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn:hover, .submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn, .cancel-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #565353 0%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-links a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.demo-accounts {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.demo-accounts h4 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.demo-accounts p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.dashboard-header {
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    width: 50px;
+    height: auto;
+}
+
+.header-left h1 {
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info {
+    color: #666;
+    font-weight: 500;
+}
+
+.logout-btn, .back-btn {
+    padding: 8px 16px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn {
+    background: #3498db;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+.back-btn:hover {
+    background: #2980b9;
+}
+
+.dashboard-nav {
+    background: #34495e;
+    padding: 0 30px;
+    display: flex;
+    gap: 0;
+}
+
+.nav-item {
+    padding: 15px 20px;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: #2c3e50;
+    color: white;
+    border-bottom-color: #3498db;
+}
+
+.dashboard-main, .form-main, .reports-main, .admin-main, .audit-main, .export-main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Stats Cards */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stats-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.stats-card p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Action Cards */
+.quick-actions, .create-reports {
+    margin-bottom: 30px;
+}
+
+.quick-actions h2, .create-reports h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.action-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border-left: 4px solid #3498db;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.action-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.action-card p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Form Styles */
+.report-form, .user-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.radio-label, .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.radio-label:hover, .checkbox-label:hover {
+    background-color: #f8f9fa;
+}
+
+.radio-label input, .checkbox-label input {
+    width: auto;
+    margin: 0;
+}
+
+.readonly-field {
+    background-color: #f8f9fa;
+    color: #666;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+/* Table Styles */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.reports-table, .users-table, .audit-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reports-table th, .users-table th, .audit-table th {
+    background: #34495e;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.reports-table td, .users-table td, .audit-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.reports-table tr:hover, .users-table tr:hover, .audit-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.no-data {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 40px;
+}
+
+/* Status Badges */
+.status-badge, .level-badge, .action-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-submitted, .status-active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-inactive {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.level-leader {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.level-admin {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.level-technician {
+    background: #d4edda;
+    color: #155724;
+}
+
+.action-insert {
+    background: #d4edda;
+    color: #155724;
+}
+
+.action-update {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.action-delete {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Button Styles */
+.view-btn, .edit-btn, .delete-btn, .details-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.view-btn {
+    background: #3498db;
+    color: white;
+}
+
+.edit-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.details-btn {
+    background: #9b59b6;
+    color: white;
+}
+
+.add-btn{
+    background: #27ae60;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* --- BUTTONS & ACTIONS SECTION (AUDIT TRAIL) --- */
+
+/* Atur kontainer tombol (filter-actions) agar tombol diletakkan berdampingan (horizontal) */
+.filter-actions {
+    display: flex; /* Gunakan Flexbox untuk tata letak horizontal */
+    gap: 10px; /* Jarak antara tombol Filter dan Bersihkan */
+    align-items: flex-end; 
+    flex-wrap: nowrap; 
+    width: 100%; 
+}
+
+/* Samakan dimensi dasar untuk kedua tombol: Filter & Bersihkan */
+.filter-btn,
+.clear-btn {
+    /* --- PENGATURAN LEBAR TOMBOL --- */
+    
+    /* PILIHAN AKTIF: Agar lebar tombol SAMA, mengisi kontainer, dan mengatasi masalah perbedaan ukuran sebelumnya. */
+    flex: 1 !important; 
+    min-width: 0 !important;
+
+    /* DINONAKTIFKAN: Properti width eksplisit (150px) yang menyebabkan padding terlihat besar 
+       karena sisa ruang 150px dibagi di kiri/kanan. */
+    /* width: 150px; */ 
+    
+    /* --- AKHIR PENGATURAN LEBAR TOMBOL --- */
+
+    /* Tampilan Dasar */
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none; 
+    
+    /* Gunakan inline-flex, dan terapkan tinggi yang sama */
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    
+    /* TINGGI SAMA */
+    height: 44px; 
+    
+    /* Dimensi Utama (Padding) - Ini adalah jarak yang Anda kontrol di sekitar teks */
+    padding: 10px 18px; 
+    
+    /* Hapus margin yang tidak perlu */
+    margin: 0; 
+
+    /* Efek Transisi */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+    
+
+/* Warna Khusus Tombol Filter (Hijau) */
+.filter-btn {
+    background: #27ae60; 
+}
+
+.filter-btn:hover {
+    background: #229954; 
+    transform: translateY(-1px);
+}
+
+
+/* Warna Khusus Tombol Bersihkan (Abu-abu/Netral) */
+.clear-btn {
+    background: #95a5a6; 
+}
+
+.clear-btn:hover {
+    background: #7f8c8d; 
+    transform: translateY(-1px);
+}
+
+/* --- AKHIR BUTTONS & ACTIONS SECTION (AUDIT TRAIL) --- */
+
+
+/* --- AKHIR BUTTONS & ACTIONS SECTION (AUDIT TRAIL) --- */
+
+.export-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.export-btn.pdf {
+    background: #e74c3c;
+    color: white;
+}
+
+.export-btn.excel {
+    background: #27ae60;
+    color: white;
+}
+
+.toggle-btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: #27ae60;
+    color: white;
+}
+
+.toggle-btn.inactive {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Filters */
+.filters-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.filters-form {
+    display: grid;
+    /* Grid akan menyesuaikan kolom, memastikan filter-actions berada di baris yang sama jika ada ruang */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px;
+    align-items: end; /* KUNCI: Sejajarkan semua item ke bawah (termasuk .filter-actions) */
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Admin Sections */
+.section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.add-form {
+    margin-bottom: 20px;
+}
+
+.add-form .form-row {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+}
+
+.add-form input, .add-form select {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.option-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.option-type {
+    font-size: 12px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.report-details, .audit-details {
+    line-height: 1.8;
+}
+
+.report-details p, .audit-details p {
+    margin-bottom: 10px;
+}
+
+.report-details strong, .audit-details strong {
+    color: #2c3e50;
+}
+
+.report-meta {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #666;
+}
+
+.audit-details pre {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 12px;
+}
+
+/* Export Styles */
+.export-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.export-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.export-info {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.export-info h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.export-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.export-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.export-info li:last-child {
+    border-bottom: none;
+}
+
+.export-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.export-section h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    z-index: 1000;
+    display: none;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .dashboard-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-grid, .action-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .export-buttons {
+        flex-direction: column;
+    }
+    
+    .add-form .form-row {
+        flex-direction: column;
+    }
+    
+    .option-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+    
+    .dashboard-main, .form-main, .reports-main, .admin-main, .audit-main, .export-main {
+        padding: 15px;
+    }
+    
+    .header-left h1 {
+        font-size: 18px;
+    }
+    
+    .nav-item {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .dashboard-header, .dashboard-nav, .filters-section, .form-actions, .no-print {
+        display: none !important;
+    }
+    
+    .dashboard-container {
+        background: white;
+    }
+    
+    .table-container, .section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
